@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appendix B: Risk Register</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1, h2 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            color: #111;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+            font-size: 14px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        thead {
+            background-color: #f7f7f7;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #fdfdfd;
+        }
+        th:first-child, td:first-child {
+            font-weight: bold;
+            white-space: nowrap;
+        }
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .risk-high {
+            background-color: #ffebee;
+            font-weight: bold;
+            color: #c62828;
+        }
+        .risk-medium {
+            background-color: #fff3e0;
+            font-weight: bold;
+            color: #f57c00;
+        }
+        .risk-low {
+            background-color: #e8f5e9;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+    </style>
+<script type='text/javascript' src='https://8080-m-s-31hhfrg6oanc9-c.us-central1-1.prod.colab.dev/nzsqB77a8eXYkLEjvxhwzLx10hag8UI9sqABhUgO8NJ1ZOWRIhitRaP33uI64qtF05d7p741N8O6ZOU_9dTFz-wuvA8MiQldH2-8iAgxCgQq86_FPApkHYtkoYCdYvC-e3FQUDBiIPjriCptj8rOX_vifWf7lOeIMo1XXHsdpIo='></script></head>
+<body>
+
+    <h1>Appendix B: Risk Register</h1>
+
+    <h2>Part 1: Simulated Academic Pilot</h2>
+    <style type="text/css">
+</style>
+<table id="T_6f2cf">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_6f2cf_level0_col0" class="col_heading level0 col0" >ID</th>
+      <th id="T_6f2cf_level0_col1" class="col_heading level0 col1" >Risk Description</th>
+      <th id="T_6f2cf_level0_col2" class="col_heading level0 col2" >Impact</th>
+      <th id="T_6f2cf_level0_col3" class="col_heading level0 col3" >Likelihood</th>
+      <th id="T_6f2cf_level0_col4" class="col_heading level0 col4" >Risk Level</th>
+      <th id="T_6f2cf_level0_col5" class="col_heading level0 col5" >Mitigation Strategy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_6f2cf_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_6f2cf_row0_col0" class="data row0 col0" >B.1.1</td>
+      <td id="T_6f2cf_row0_col1" class="data row0 col1" ><strong>Simulation Fidelity Risk.</strong> The simulated market model (e.g., asset price fluctuations, secondary market liquidity) does not accurately represent the dynamics of a real market, leading to conclusions with low external validity.</td>
+      <td id="T_6f2cf_row0_col2" class="data row0 col2" >High (on research validity)</td>
+      <td id="T_6f2cf_row0_col3" class="data row0 col3" >Medium</td>
+      <td id="T_6f2cf_row0_col4" class="data row0 col4 risk-high" >High</td>
+      <td id="T_6f2cf_row0_col5" class="data row0 col5" ><ul><li>Utilize multiple data sources (oracles) for the price model, basing it on real market indices.</li><li>Model liquidity based on empirical data from other fractional investment platforms.</li><li>Explicitly state this limitation in the thesis.</li></ul></td>
+    </tr>
+    <tr>
+      <th id="T_6f2cf_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_6f2cf_row1_col0" class="data row1 col0" >B.1.2</td>
+      <td id="T_6f2cf_row1_col1" class="data row1 col1" ><strong>Behavioral Gap Risk (Hawthorne Effect).</strong> Participants act differently than they would in a real-world scenario (e.g., taking excessive risks) because they are aware they are in an experiment and are not using real money.</td>
+      <td id="T_6f2cf_row1_col2" class="data row1 col2" >High (on research validity)</td>
+      <td id="T_6f2cf_row1_col3" class="data row1 col3" >High</td>
+      <td id="T_6f2cf_row1_col4" class="data row1 col4 risk-high" >High</td>
+      <td id="T_6f2cf_row1_col5" class="data row1 col5" ><ul><li>Design the simulation with realistic constraints (e.g., transaction costs, initial capital limits).</li><li>Use pre- and post-pilot surveys to gauge risk perception.</li><li>Acknowledge the potential behavioral gap as a core limitation in the research findings.</li></ul></td>
+    </tr>
+    <tr>
+      <th id="T_6f2cf_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_6f2cf_row2_col0" class="data row2 col0" >B.1.3</td>
+      <td id="T_6f2cf_row2_col1" class="data row2 col1" ><strong>Technical & Operational Risk.</strong> The pilot platform or its underlying smart contracts contain bugs, or the external data oracles providing market data fail, leading to simulation downtime or corrupted data.</td>
+      <td id="T_6f2cf_row2_col2" class="data row2 col2" >Medium (on pilot execution)</td>
+      <td id="T_6f2cf_row2_col3" class="data row2 col3" >Medium</td>
+      <td id="T_6f2cf_row2_col4" class="data row2 col4 risk-medium" >Medium</td>
+      <td id="T_6f2cf_row2_col5" class="data row2 col5" ><ul><li>Conduct thorough testing of the platform and smart contracts on a testnet before the pilot.</li><li>Implement redundant oracle sources and a monitoring system for data feed integrity.</li><li>Have a clear communication plan for participants in case of technical issues.</li></ul></td>
+    </tr>
+    <tr>
+      <th id="T_6f2cf_level0_row3" class="row_heading level0 row3" >3</th>
+      <td id="T_6f2cf_row3_col0" class="data row3 col0" >B.1.4</td>
+      <td id="T_6f2cf_row3_col1" class="data row3 col1" ><strong>Data Privacy & Ethical Risk.</strong> The collection, storage, and analysis of participant data (including KYC and survey responses) do not comply with GDPR, or ethical standards for academic research are not fully met.</td>
+      <td id="T_6f2cf_row3_col2" class="data row3 col2" >High (on legal and ethical compliance)</td>
+      <td id="T_6f2cf_row3_col3" class="data row3 col3" >Low</td>
+      <td id="T_6f2cf_row3_col4" class="data row3 col4 risk-medium" >Medium</td>
+      <td id="T_6f2cf_row3_col5" class="data row3 col5" ><ul><li>Develop a comprehensive Data Management Plan.</li><li>Anonymize all research data prior to analysis.</li><li>Ensure the study protocol is approved by an institutional Ethics Committee.</li><li>Provide participants with a clear informed consent form.</li></ul></td>
+    </tr>
+  </tbody>
+</table>
+
+
+    <h2>Part 2: Future Commercial Implementation</h2>
+    <p><em>Note: This register contains the primary risks identified for a potential commercial-scale implementation with real assets.</em></p>
+    <style type="text/css">
+</style>
+<table id="T_f84e7">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_f84e7_level0_col0" class="col_heading level0 col0" >ID</th>
+      <th id="T_f84e7_level0_col1" class="col_heading level0 col1" >Risk Description</th>
+      <th id="T_f84e7_level0_col2" class="col_heading level0 col2" >Impact</th>
+      <th id="T_f84e7_level0_col3" class="col_heading level0 col3" >Likelihood</th>
+      <th id="T_f84e7_level0_col4" class="col_heading level0 col4" >Risk Level</th>
+      <th id="T_f84e7_level0_col5" class="col_heading level0 col5" >Mitigation Strategy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_f84e7_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_f84e7_row0_col0" class="data row0 col0" >B.2.1</td>
+      <td id="T_f84e7_row0_col1" class="data row0 col1" ><strong>Regulatory Ambiguity (Tax & Land Registry).</strong> Lack of clear tax framework for security tokens and administrative barriers in property registration for tokenized assets.</td>
+      <td id="T_f84e7_row0_col2" class="data row0 col2" >High</td>
+      <td id="T_f84e7_row0_col3" class="data row0 col3" >High</td>
+      <td id="T_f84e7_row0_col4" class="data row0 col4 risk-high" >High</td>
+      <td id="T_f84e7_row0_col5" class="data row0 col5" >Use of a Special Purpose Vehicle (SPV) legal structure; provide clear tax guidance to users; proactive engagement with regulators.</td>
+    </tr>
+    <tr>
+      <th id="T_f84e7_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_f84e7_row1_col0" class="data row1 col0" >B.2.2</td>
+      <td id="T_f84e7_row1_col1" class="data row1 col1" ><strong>Smart Contract Vulnerability.</strong> Bugs, exploits, or flaws in the smart contract code could lead to irreversible loss of funds or asset control.</td>
+      <td id="T_f84e7_row1_col2" class="data row1 col2" >Critical</td>
+      <td id="T_f84e7_row1_col3" class="data row1 col3" >Low</td>
+      <td id="T_f84e7_row1_col4" class="data row1 col4 risk-medium" >Medium</td>
+      <td id="T_f84e7_row1_col5" class="data row1 col5" >Conduct multiple independent security audits of all smart contract code; implement a bug bounty program to incentivize ethical hacking.</td>
+    </tr>
+    <tr>
+      <th id="T_f84e7_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_f84e7_row2_col0" class="data row2 col0" >B.2.3</td>
+      <td id="T_f84e7_row2_col1" class="data row2 col1" ><strong>Low Secondary Market Liquidity.</strong> Inability for token holders to sell their assets quickly at a fair market price, undermining the benefit of tokenization.</td>
+      <td id="T_f84e7_row2_col2" class="data row2 col2" >High</td>
+      <td id="T_f84e7_row2_col3" class="data row2 col3" >High</td>
+      <td id="T_f84e7_row2_col4" class="data row2 col4 risk-high" >High</td>
+      <td id="T_f84e7_row2_col5" class="data row2 col5" >The platform will act as an initial market maker to ensure baseline liquidity; form partnerships with established secondary market providers.</td>
+    </tr>
+    <tr>
+      <th id="T_f84e7_level0_row3" class="row_heading level0 row3" >3</th>
+      <td id="T_f84e7_row3_col0" class="data row3 col0" >B.2.4</td>
+      <td id="T_f84e7_row3_col1" class="data row3 col1" ><strong>Operational Failure (Off-Chain).</strong> Mismanagement of the physical property (e.g., maintenance, tenant issues, insurance) impacting cash flows and asset value.</td>
+      <td id="T_f84e7_row3_col2" class="data row3 col2" >High</td>
+      <td id="T_f84e7_row3_col3" class="data row3 col3" >Medium</td>
+      <td id="T_f84e7_row3_col4" class="data row3 col4 risk-high" >High</td>
+      <td id="T_f84e7_row3_col5" class="data row3 col5" >Appoint a reputable and independent third-party property manager; establish a transparent governance model with a maintenance reserve fund.</td>
+    </tr>
+    <tr>
+      <th id="T_f84e7_level0_row4" class="row_heading level0 row4" >4</th>
+      <td id="T_f84e7_row4_col0" class="data row4 col0" >B.2.5</td>
+      <td id="T_f84e7_row4_col1" class="data row4 col1" ><strong>Low Financial Literacy of Users.</strong> Users may not fully understand the risks of real estate investment, leading to poor decisions and potential losses.</td>
+      <td id="T_f84e7_row4_col2" class="data row4 col2" >Medium</td>
+      <td id="T_f84e7_row4_col3" class="data row4 col3" >High</td>
+      <td id="T_f84e7_row4_col4" class="data row4 col4 risk-high" >High</td>
+      <td id="T_f84e7_row4_col5" class="data row4 col5" >Implement a mandatory educational onboarding process for all new users; provide clear, jargon-free risk warnings and documentation.</td>
+    </tr>
+    <tr>
+      <th id="T_f84e7_level0_row5" class="row_heading level0 row5" >5</th>
+      <td id="T_f84e7_row5_col0" class="data row5 col0" >B.2.6</td>
+      <td id="T_f84e7_row5_col1" class="data row5 col1" ><strong>Data Privacy Breach (GDPR).</strong> Failure to securely manage KYC/AML data and other personal information of investors.</td>
+      <td id="T_f84e7_row5_col2" class="data row5 col2" >High</td>
+      <td id="T_f84e7_row5_col3" class="data row5 col3" >Medium</td>
+      <td id="T_f84e7_row5_col4" class="data row5 col4 risk-high" >High</td>
+      <td id="T_f84e7_row5_col5" class="data row5 col5" >Adhere strictly to GDPR principles; use decentralized identity solutions (ONCHAINID) to give users more control over their data.</td>
+    </tr>
+    <tr>
+      <th id="T_f84e7_level0_row6" class="row_heading level0 row6" >6</th>
+      <td id="T_f84e7_row6_col0" class="data row6 col0" >B.2.7</td>
+      <td id="T_f84e7_row6_col1" class="data row6 col1" ><strong>Negative ESG Impact (Energy & Gentrification).</strong> High energy consumption of the underlying blockchain and potential contribution to housing unaffordability in local markets.</td>
+      <td id="T_f84e7_row6_col2" class="data row6 col2" >Medium</td>
+      <td id="T_f84e7_row6_col3" class="data row6 col3" >Medium</td>
+      <td id="T_f84e7_row6_col4" class="data row6 col4 risk-medium" >Medium</td>
+      <td id="T_f84e7_row6_col5" class="data row6 col5" >Utilize an energy-efficient Proof-of-Stake (PoS) Layer-2 blockchain (e.g., Polygon); partner with municipalities to align projects with local housing goals.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+</body>
+</html>
